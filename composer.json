@@ -1,5 +1,5 @@
 {
-	"name": "glauberportella/cnab-layouts-parser",
+	"name": "allanmcarvalho/cnab-layouts-parser",
     "description": "Parser de arquivos de configuração CNAB gerados no projeto https://github.com/glauberportella/cnab-layouts",
     "type": "project",
     "license": "MIT",
