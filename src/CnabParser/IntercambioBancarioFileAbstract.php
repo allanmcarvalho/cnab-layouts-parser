@@ -36,5 +36,13 @@ abstract class IntercambioBancarioFileAbstract
 	 * @param  string $path
 	 * @return boolean
 	 */
-	abstract public function generate($path);
+	abstract public function generateFile($path);
+	
+	
+	/**
+	 * Write to file $path
+	 * @param  string $path
+	 * @return boolean
+	 */
+	abstract public function generateString($path);
 }
