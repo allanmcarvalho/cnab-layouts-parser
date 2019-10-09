@@ -53,7 +53,7 @@ class RemessaFile extends IntercambioBancarioRemessaFileAbstract
 	}
 	
 	
-	public function generateString($path)
+	public function generateString()
 	{
 		// header arquivo
 		$headerArquivo = $this->encodeHeaderArquivo();
