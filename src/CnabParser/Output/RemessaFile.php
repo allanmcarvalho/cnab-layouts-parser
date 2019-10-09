@@ -28,7 +28,7 @@ class RemessaFile extends IntercambioBancarioRemessaFileAbstract
 {
 	const CNAB_EOL = "\r\n";
 
-	public function generate($path)
+	public function generateFile($path)
 	{
 		// header arquivo
 		$headerArquivo = $this->encodeHeaderArquivo();
@@ -50,6 +50,31 @@ class RemessaFile extends IntercambioBancarioRemessaFileAbstract
 		$data .= self::CNAB_EOL;
 
 		file_put_contents($path, $data);
+	}
+	
+	
+	public function generateString($path)
+	{
+		// header arquivo
+		$headerArquivo = $this->encodeHeaderArquivo();
+
+		// lotes
+		$lotes = $this->encodeLotes();
+
+		// trailer arquivo
+		$trailerArquivo = $this->encodeTrailerArquivo();
+		
+
+		$data = array(
+			$headerArquivo,
+			$lotes,
+			$trailerArquivo,
+		);
+
+		$data = implode(self::CNAB_EOL, $data);
+		$data .= self::CNAB_EOL;
+
+		return $data;
 	}
 
 	protected function encodeHeaderArquivo()
