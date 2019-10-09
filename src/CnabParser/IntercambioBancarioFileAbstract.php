@@ -44,5 +44,5 @@ abstract class IntercambioBancarioFileAbstract
 	 * @param  string $path
 	 * @return boolean
 	 */
-	abstract public function generateString($path);
+	abstract public function generateString();
 }
