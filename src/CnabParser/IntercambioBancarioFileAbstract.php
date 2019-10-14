@@ -30,19 +30,4 @@ abstract class IntercambioBancarioFileAbstract
 	 * @var CnabParser\Model\IntercambioBancarioAbstract
 	 */
 	protected $model;
-
-	/**
-	 * Write to file $path
-	 * @param  string $path
-	 * @return boolean
-	 */
-	abstract public function generateFile($path);
-	
-	
-	/**
-	 * Write to file $path
-	 * @param  string $path
-	 * @return boolean
-	 */
-	abstract public function generateString();
 }
